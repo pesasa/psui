@@ -1,0 +1,379 @@
+/***************************************
+ * PSUI - Themable widget set with CSS
+ * @author Petri Salmela <pesasa@iki.fi>
+ ***************************************/
+label.psui-row {
+    display: block;
+}
+
+label.psui-row:hover {
+    background-color: rgba(170,170,170,0.3);
+}
+
+label.psui-row::before {
+    content: attr(title);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*****
+ * Range
+ *****/
+.psui-range input[type="range"] {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.psui-range input[type="number"] {
+    display: inline-block;
+    vertical-align: middle;
+    width: 3em;
+}
+
+/*****
+ * Dropdown
+ *****/
+.psui-dropdown {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.1em;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+
+.psui-dropdown label .psui-label,
+.psui-dropdown label input[type="radio"] + span {
+    display: none;
+    cursor: pointer;
+    font-size: 80%;
+    font-family: sans-serif;
+}
+
+.psui-dropdown:focus label .psui-label,
+.psui-dropdown:focus label input[type="radio"] + span,
+.psui-dropdown label input[type="radio"]:checked + span {
+    display: block;
+    padding: 0.1em 0.5em;
+    border: 1px solid transparent;
+}
+
+.psui-dropdown label input[type="radio"]:checked + span {
+    border: 1px solid #999;
+    border-radius: 0.3em;
+    background-color: #eee;
+}
+
+.psui-dropdown label input[type="radio"] {
+    display: none;
+}
+
+/*****
+ * Dropdown multi
+ *****/
+.psui-dropdownmulti {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.1em;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+    word-spacing: 0;
+}
+
+.psui-dropdownmulti label {
+    display: inline-block;
+    margin: 0 -0.1em;
+    word-spacing: normal;
+    font-family: sans-serif;
+}
+
+.psui-dropdownmulti:focus label {
+    display: inline-block;
+}
+
+.psui-dropdownmulti label .psui-label,
+.psui-dropdownmulti label input[type="radio"] + span {
+    display: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 80%;
+}
+
+.psui-dropdownmulti:focus label .psui-label,
+.psui-dropdownmulti:focus label input[type="checkbox"] + span,
+.psui-dropdownmulti label input[type="checkbox"]:checked + span {
+    display: inline-block;
+    padding: 0.1em 0.5em;
+    margin: 0 0.2em;
+    border: 1px solid transparent;
+}
+
+.psui-dropdownmulti label input[type="checkbox"]:checked + span {
+    border: 1px solid #999;
+    border-radius: 0.3em;
+    background-color: #eee;
+}
+
+.psui-dropdownmulti label input[type="checkbox"] {
+    display: none;
+}
+
+/*****
+ * Button
+ *****/
+.psui-button {
+    border: 1px solid #999;
+    border-radius: 0.3em;
+    background-color: #eee;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    padding: 0.2em 0.5em;
+    display: inline-block;
+    font-size: 90%;
+    font-family: sans-serif;
+}
+
+.psui-button:hover {
+    background-color: #f7f7f7;
+    text-shadow: 0 0 1px black;
+}
+
+.psui-button:active {
+    background-color: #ddd;
+}
+
+/*****
+ * File
+ *****/
+.psui-file {
+    background: transparent url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='30' height='30' viewBox='0 0 30 30' class='pssicon pssicon-folder pssicon-open'><path style='stroke: none;' d='M2 6 l7 0 l1 2 l13 0 l0 2 l-16 0 l-4 14 l5 -12 l21 0 l-5 13 -22 0z'></path></svg>") center center no-repeat;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    border: 1px solid #999;
+    border-radius: 0.3em;
+    background-color: #eee;
+    cursor: pointer;
+    padding: 0.2em 0.5em;
+}
+
+.psui-file:hover {
+    background-color: #f7f7f7;
+    text-shadow: 0 0 1px black;
+}
+
+.psui-file:active {
+    background-color: #ddd;
+}
+
+.psui-file input[type="file"] {
+    display: none;
+}
+
+
+
+/***************************************************************************
+ * Themes
+ ***************************************************************************/
+
+/*************
+ * round-red
+ *************/
+/**** input text ****/
+[data-psui-theme="round-red"] .psui-input-text input[type="text"] {
+    border: 1px solid #a00;
+    border-radius: 1em;
+    padding: 0.2em 0.5em;
+    margin: 0.1em;
+    background-color: #fff0f0;
+}
+
+[data-psui-theme="round-red"] .psui-input-text input[type="text"]:focus {
+    background-color: white;
+}
+
+/**** input checkbox ****/
+[data-psui-theme="round-red"] .psui-checkbox {
+    margin: 0.1em 0;
+}
+
+[data-psui-theme="round-red"] .psui-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+[data-psui-theme="round-red"] .psui-checkbox input[type="checkbox"] + .psui-label {
+}
+
+[data-psui-theme="round-red"] .psui-checkbox input[type="checkbox"] + .psui-label::before {
+    content: "";
+    display: inline-block;
+    vertical-align: text-bottom;
+    width: 1em;
+    height: 1em;
+    border-radius: 0.2em;
+    border: 1px solid #a00;
+    margin-right: 0.5em;
+    background-color: white;
+}
+
+[data-psui-theme="round-red"] .psui-checkbox input[type="checkbox"]:checked + .psui-label::before {
+    background: #fff0f0 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='1em' height='1em' viewBox='0 0 30 30' class='pssicon pssicon-check'><path style='fill: rgb(170,0,0); stroke: none;' d='M5 5 l10 6 l10 -6 l-6 10 l6 10 l-10 -6 l-10 6 l6 -10z'></path></svg>") center center no-repeat;
+}
+
+/**** input radio ****/
+[data-psui-theme="round-red"] .psui-radio {
+    margin: 0.1em 0;
+}
+
+[data-psui-theme="round-red"] .psui-radio input[type="radio"] {
+    display: none;
+}
+
+[data-psui-theme="round-red"] .psui-radio input[type="radio"] + .psui-label {
+}
+
+[data-psui-theme="round-red"] .psui-radio input[type="radio"] + .psui-label::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 1px solid #a00;
+    margin-right: 0.5em;
+    background-color: white;
+}
+
+[data-psui-theme="round-red"] .psui-radio input[type="radio"]:checked + .psui-label::before {
+    background: #fff0f0 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='1em' height='1em' viewBox='0 0 30 30' class='pssicon pssicon-radio'><path style='fill: rgb(170,0,0); stroke: none;' d='M15 7 a8 8 0 0 0 0 16 a8 8 0 0 0 0 -16z'></path></svg>") center center no-repeat;
+}
+
+/**** input range ****/
+[data-psui-theme="round-red"] .psui-range input[type="range"] {
+    -webkit-appearance: none;
+    background-color: #fff0f0;
+    border-radius: 5px;
+    /*box-shadow: inset 1px 1px 3px rgba(170,0,0,0.6);*/
+    height:4px;
+    border: 1px solid #a00;
+}
+
+[data-psui-theme="round-red"] .psui-range input[type="range"]::-moz-range-track {
+    -moz-appearance: none;
+    background-color: #fff0f0;
+    border-radius: 4px;
+    /*box-shadow: inset 1px 1px 3px rgba(170,0,0,0.6);*/
+    height:4px;
+    border: 1px solid #a00;
+}
+
+[data-psui-theme="round-red"] .psui-range input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #a00;
+    background-color: #fff0f0;
+    cursor: pointer;
+    /*background: transparent url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='1em' height='1em' viewBox='0 0 30 30' class='pssicon pssicon-sliderthumb'><path style='fill: rgb(170,0,0); stroke: none;' d='M7 0 l16 0 l-8 15 l8 15 l-16 0 l8 -15z'></path></svg>") center center no-repeat;*/
+}
+
+[data-psui-theme="round-red"] .psui-range input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #a00;
+    background-color: #fff0f0;
+    cursor: pointer;
+}
+
+[data-psui-theme="round-red"] .psui-range input[type="number"] {
+    border: 1px solid #a00;
+    border-radius: 1em;
+    padding: 0.1em 0.5em;
+    background-color: #fff0f0;
+}
+
+/**** Dropdown ****/
+[data-psui-theme="round-red"] .psui-dropdown {
+    background-color: #fff0f0;
+    border: 1px solid #a00;
+    background-color: white;
+}
+
+[data-psui-theme="round-red"] .psui-dropdown label .psui-label,
+[data-psui-theme="round-red"] .psui-dropdown label input[type="radio"] + span {
+    color: #a00;
+    padding: 0.1em 0.8em;
+}
+
+[data-psui-theme="round-red"] .psui-dropdown label input[type="radio"]:checked + span {
+    background-color: #fff0f0;
+    color: #a00;
+    font-weight: bold;
+    border: 1px solid #a00;
+    border-radius: 1em;
+}
+
+/**** Dropdown multi ****/
+[data-psui-theme="round-red"] .psui-dropdownmulti {
+    background-color: #fff0f0;
+    border: 1px solid #a00;
+    background-color: white;
+}
+
+[data-psui-theme="round-red"] .psui-dropdownmulti label .psui-label,
+[data-psui-theme="round-red"] .psui-dropdownmulti label input[type="checkbox"] + span {
+    color: #a00;
+    padding: 0.1em 0.8em;
+}
+
+[data-psui-theme="round-red"] .psui-dropdownmulti label input[type="checkbox"]:checked + span {
+    background-color: #fff0f0;
+    color: #a00;
+    /*font-weight: bold;*/
+    border: 1px solid #a00;
+    border-radius: 1em;
+}
+
+/**** Button ****/
+[data-psui-theme="round-red"] .psui-button {
+    background-color: #fff0f0;
+    color: #a00;
+    border: 1px solid #a00;
+    border-radius: 1em;
+    padding: 0.2em 0.8em;
+}
+
+[data-psui-theme="round-red"] .psui-button:hover {
+    background-color: #fcc;
+    text-shadow: 0 0 1px rgba(170,0,0,1);
+}
+
+[data-psui-theme="round-red"] .psui-button:active {
+    background-color: #a00;
+    color: white;
+}
+
+/**** input file ****/
+[data-psui-theme="round-red"] .psui-file {
+    background: #fff0f0 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='30' height='30' viewBox='0 0 30 30' class='pssicon pssicon-folder pssicon-open'><path style='fill: rgb(170,0,0); stroke: none;' d='M2 6 l7 0 l1 2 l13 0 l0 2 l-16 0 l-4 14 l5 -12 l21 0 l-5 13 -22 0z'></path></svg>") center center no-repeat;
+    border: 1px solid #a00;
+    border-radius: 15px;;
+}
+
+[data-psui-theme="round-red"] .psui-file:hover {
+    background-color: #fcc;
+}
+
+[data-psui-theme="round-red"] .psui-file:active {
+    background: #a00 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='30' height='30' viewBox='0 0 30 30' class='pssicon pssicon-folder pssicon-open'><path style='fill: white; stroke: none;' d='M2 6 l7 0 l1 2 l13 0 l0 2 l-16 0 l-4 14 l5 -12 l21 0 l-5 13 -22 0z'></path></svg>") center center no-repeat;
+    color: white;
+}
