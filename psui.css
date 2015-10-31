@@ -147,6 +147,110 @@ label.psui-row::before {
 }
 
 /*****
+ * Buttonset
+ *****/
+.psui-buttonset {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+
+.psui-buttonset label .psui-label,
+.psui-buttonset label input[type="radio"] + span {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.2em 0.5em;
+    font-size: 80%;
+    font-family: sans-serif;
+    border: 1px solid #999;
+}
+
+.psui-buttonset label:first-child .psui-label,
+.psui-buttonset label:first-child input[type="radio"] + span {
+    border-radius: 0.3em 0 0 0.3em;
+}
+
+.psui-buttonset label:last-child .psui-label,
+.psui-buttonset label:last-child input[type="radio"] + span {
+    border-radius: 0 0.3em 0.3em 0;
+}
+
+.psui-buttonset label:first-child:last-child .psui-label,
+.psui-buttonset label:first-child:last-child input[type="radio"] + span {
+    border-radius: 0.3em;
+}
+
+.psui-buttonset label:hover input[type="radio"] + span {
+    background-color: #f7f7f7;
+    text-shadow: 0 0 1px black;
+}
+
+.psui-buttonset label input[type="radio"]:checked + span {
+    background-color: #ddd;
+}
+
+.psui-buttonset label input[type="radio"] {
+    display: none;
+}
+
+/*****
+ * Buttonset many
+ *****/
+.psui-buttonsetmulti {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+
+.psui-buttonsetmulti label .psui-label,
+.psui-buttonsetmulti label input[type="checkbox"] + span {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.2em 0.5em;
+    font-size: 80%;
+    font-family: sans-serif;
+    border: 1px solid #999;
+}
+
+.psui-buttonsetmulti label:first-child .psui-label,
+.psui-buttonsetmulti label:first-child input[type="checkbox"] + span {
+    border-radius: 0.3em 0 0 0.3em;
+}
+
+.psui-buttonsetmulti label:last-child .psui-label,
+.psui-buttonsetmulti label:last-child input[type="checkbox"] + span {
+    border-radius: 0 0.3em 0.3em 0;
+}
+
+.psui-buttonsetmulti label:first-child:last-child .psui-label,
+.psui-buttonsetmulti label:first-child:last-child input[type="checkbox"] + span {
+    border-radius: 0.3em;
+}
+
+.psui-buttonsetmulti label:hover input[type="checkbox"] + span {
+    background-color: #f7f7f7;
+    text-shadow: 0 0 1px black;
+}
+
+.psui-buttonsetmulti label input[type="checkbox"]:checked + span {
+    background-color: #ddd;
+}
+
+.psui-buttonsetmulti label input[type="checkbox"] {
+    display: none;
+}
+
+/*****
  * File
  *****/
 .psui-file {
@@ -360,6 +464,66 @@ label.psui-row::before {
 [data-psui-theme="round-red"] .psui-button:active {
     background-color: #a00;
     color: white;
+}
+
+/**** Buttonset ****/
+[data-psui-theme="round-red"] .psui-buttonset label .psui-label,
+[data-psui-theme="round-red"] .psui-buttonset label input[type="radio"] + span {
+    background-color: #fff0f0;
+    color: #a00;
+    border: 1px solid #a00;
+    padding: 0.3em 0.8em;
+}
+
+[data-psui-theme="round-red"] .psui-buttonset label input[type="radio"]:checked .psui-label,
+[data-psui-theme="round-red"] .psui-buttonset label input[type="radio"]:checked + span {
+    background-color: #fcc;
+    text-shadow: 0 0 1px rgba(170,0,0,1);
+}
+
+[data-psui-theme="round-red"] .psui-buttonset label:first-child input[type="radio"] .psui-label,
+[data-psui-theme="round-red"] .psui-buttonset label:first-child input[type="radio"] + span {
+    border-radius: 1em 0 0 1em;
+}
+
+[data-psui-theme="round-red"] .psui-buttonset label:last-child input[type="radio"] .psui-label,
+[data-psui-theme="round-red"] .psui-buttonset label:last-child input[type="radio"] + span {
+    border-radius: 0 1em 1em 0;
+}
+
+[data-psui-theme="round-red"] .psui-buttonset label:first-child:last-child input[type="radio"] .psui-label,
+[data-psui-theme="round-red"] .psui-buttonset label:first-child:last-child input[type="radio"] + span {
+    border-radius: 1em;
+}
+
+/**** Buttonset multi ****/
+[data-psui-theme="round-red"] .psui-buttonsetmulti label .psui-label,
+[data-psui-theme="round-red"] .psui-buttonsetmulti label input[type="radio"] + span {
+    background-color: #fff0f0;
+    color: #a00;
+    border: 1px solid #a00;
+    padding: 0.3em 0.8em;
+}
+
+[data-psui-theme="round-red"] .psui-buttonsetmulti label input[type="checkbox"]:checked .psui-label,
+[data-psui-theme="round-red"] .psui-buttonsetmulti label input[type="checkbox"]:checked + span {
+    background-color: #fcc;
+    text-shadow: 0 0 1px rgba(170,0,0,1);
+}
+
+[data-psui-theme="round-red"] .psui-buttonsetmulti label:first-child input[type="checkbox"] .psui-label,
+[data-psui-theme="round-red"] .psui-buttonsetmulti label:first-child input[type="checkbox"] + span {
+    border-radius: 1em 0 0 1em;
+}
+
+[data-psui-theme="round-red"] .psui-buttonsetmulti label:last-child input[type="checkbox"] .psui-label,
+[data-psui-theme="round-red"] .psui-buttonsetmulti label:last-child input[type="checkbox"] + span {
+    border-radius: 0 1em 1em 0;
+}
+
+[data-psui-theme="round-red"] .psui-buttonsetmulti label:first-child:last-child input[type="checkbox"] .psui-label,
+[data-psui-theme="round-red"] .psui-buttonsetmulti label:first-child:last-child input[type="checkbox"] + span {
+    border-radius: 1em;
 }
 
 /**** input file ****/
