@@ -13,14 +13,16 @@
             footer {height: 200px; background: transparent url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' height='100' width='100' viewBox='0 0 100 100'><path style='fill: red; stroke: none;' d='M50 0 a50 50 0 0 0 0 100 a50 50 0 0 0 0 -100z' /></svg>") center center no-repeat;}
         </style>
     </head>
-    <body data-psui-theme="round-red">
+    <body data-psui-theme="yellow3d">
         <header>
             <h1>PSUI</h1>
             <h2>Widget set with css</h2>
         </header>
         <article>
+            
+            
             <section>
-                <h1>Text input</h1>
+                <h1>Text</h1>
                 <fieldset>
                     <legend>Text input</legend>
                     <label class="psui-row psui-input-text">Nimi: <input type="text" value="Joopajoo" class="psui" /></label>
@@ -28,8 +30,9 @@
                     <label class="psui-row psui-input-text">Nimi: <input type="text" value="Joopajoo" class="psui" /></label>
                 </fieldset>
             </section>
+            
             <section>
-                <h1>Checkbox</h1>
+                <h1>Checkbox and radiobutton</h1>
                 <fieldset>
                     <legend>Checkbox</legend>
                     <label class="psui-row psui-checkbox"><input type="checkbox" value="1"><span class="psui-label">One</span></label>
@@ -37,77 +40,81 @@
                     <label class="psui-row psui-checkbox"><input type="checkbox" value="3"><span class="psui-label">Three</span></label>
                     <label class="psui-row psui-checkbox"><input type="checkbox" value="4"><span class="psui-label">Four</span></label>
                 </fieldset>
-            </section>
-            <section>
-                <h1>Radio buttons</h1>
+
                 <fieldset>
-                    <legend>Radio</legend>
+                    <legend>Radiobutton</legend>
                     <label class="psui-row psui-radio"><input type="radio" value="1" name="radioset"><span class="psui-label">One</span></label>
                     <label class="psui-row psui-radio"><input type="radio" value="2" name="radioset"><span class="psui-label">Two</span></label>
                     <label class="psui-row psui-radio"><input type="radio" value="3" name="radioset"><span class="psui-label">Three</span></label>
                 </fieldset>
             </section>
+
             <section>
-                <h1>Slider (range)</h1>
+                <h1>Sliders</h1>
                 <fieldset>
                     <legend>Range</legend>
-                    <label class="psui-row psui-range" title="Otsikko"><input type="range" min="0" max="10" step="0.1" value="5" id="rangeInput" oninput="amount.value=rangeInput.value"/><output id="amount" for="rangeInput">5</output></label>
+                    <label class="psui-row psui-range" title="Otsikko"><input type="range" min="0" max="10" step="0.1" value="5" id="rangeInput" oninput="amount.value=rangeInput.value" /><output id="amount" for="rangeInput">5</output></label>
                     <label class="psui-row psui-range" title="Range-number "><input type="range" min="0" max="10" step="0.1" value="5" name="rinput" id="rinput" oninput="ninput.value=rinput.value"/><input type="number" name="ninput" id="ninput" min="0" max="10" step="0.1" value="5" oninput="rinput.value=ninput.value" /></label>
                 </fieldset>
-            </section>
-            <section>
-                <h1>Slider (range)</h1>
+
                 <fieldset>
-                    <legend>Range</legend>
+                    <legend>Stars</legend>
                     <label class="psui-row psui-stars" title=""><input min="0" max="5" step="1" value="0" id="starinput" oninput="this.setAttribute('data-stars', this.value)" type="range"></label>
                 </fieldset>
             </section>
+
             <section>
-                <h1>Dropdown (select one / radio)</h1>
-                <fieldset class="psui-dropdown" tabindex="0">
-                    <legend>Dropdown</legend>
-                    <label><input type="radio" value="1" name="radioset2" checked="checked"><span class="psui-label">Eka</span></label>
-                    <label><input type="radio" value="2" name="radioset2"><span class="psui-label">Toka</span></label>
-                    <label><input type="radio" value="3" name="radioset2"><span class="psui-label">Kolmas</span></label>
+                <h1>Dropdown</h1>
+                <fieldset>
+                    <legend>Select one</legend>
+                    <div class="psui-dropdown" tabindex="0">
+                        <label><input type="radio" value="1" name="radioset2" checked="checked"><span class="psui-label">Eka</span></label>
+                        <label><input type="radio" value="2" name="radioset2"><span class="psui-label">Toka</span></label>
+                        <label><input type="radio" value="3" name="radioset2"><span class="psui-label">Kolmas</span></label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Select many</legend>
+                    <div class="psui-dropdownmulti" tabindex="0">
+                        <label><input type="checkbox" value="1" name="checkset1" checked="checked"><span class="psui-label">Eka</span></label>
+                        <label><input type="checkbox" value="2" name="checkset1"><span class="psui-label">Toka</span></label>
+                        <label><input type="checkbox" value="3" name="checkset1"><span class="psui-label">Kolmas</span></label>
+                        <label><input type="checkbox" value="4" name="checkset1"><span class="psui-label">Neljäs</span></label>
+                        <label><input type="checkbox" value="5" name="checkset1"><span class="psui-label">Viides</span></label>
+                        <label><input type="checkbox" value="6" name="checkset1"><span class="psui-label">Kuudes</span></label>
+                        <label><input type="checkbox" value="7" name="checkset1"><span class="psui-label">Seitsemäs</span></label>
+                        <label><input type="checkbox" value="8" name="checkset1"><span class="psui-label">Kahdeksas</span></label>
+                    </div>
                 </fieldset>
             </section>
+
             <section>
-                <h1>Dropdown multi (select many / checkbox)</h1>
-                <fieldset class="psui-dropdownmulti" tabindex="0">
-                    <legend>Dropdown multi</legend>
-                    <label><input type="checkbox" value="1" name="checkset1" checked="checked"><span class="psui-label">Eka</span></label>
-                    <label><input type="checkbox" value="2" name="checkset1"><span class="psui-label">Toka</span></label>
-                    <label><input type="checkbox" value="3" name="checkset1"><span class="psui-label">Kolmas</span></label>
-                    <label><input type="checkbox" value="4" name="checkset1"><span class="psui-label">Neljäs</span></label>
-                    <label><input type="checkbox" value="5" name="checkset1"><span class="psui-label">Viides</span></label>
-                    <label><input type="checkbox" value="6" name="checkset1"><span class="psui-label">Kuudes</span></label>
-                    <label><input type="checkbox" value="7" name="checkset1"><span class="psui-label">Seitsemäs</span></label>
-                    <label><input type="checkbox" value="8" name="checkset1"><span class="psui-label">Kahdeksas</span></label>
-                </fieldset>
-            </section>
-            <section>
-                <h1>Button</h1>
+                <h1>Buttons</h1>
                 <fieldset>
                     <legend>Button</legend>
                     <a href="javascript:;" class="psui-button">One</a> <span class="psui-button">Two</span> <button class="psui-button">Three</button> <input type="button" class="psui-button" value="Four" />
                 </fieldset>
-            </section>
-            <section>
-                <h1>Buttonset (select one / radio)</h1>
-                <fieldset class="psui-buttonset" tabindex="0">
-                    <label><input type="radio" value="1" name="radioset3" checked="checked"><span class="psui-label">Eka</span></label><label><input type="radio" value="2" name="radioset3"><span class="psui-label">Toka</span></label><label><input type="radio" value="3" name="radioset3"><span class="psui-label">Kolmas</span></label>
+
+                <fieldset>
+                    <legend>Buttonset (select one)</legend>
+                    <div class="psui-buttonset" tabindex="0">
+                        <label><input type="radio" value="1" name="radioset3" checked="checked"><span class="psui-label">Eka</span></label><label><input type="radio" value="2" name="radioset3"><span class="psui-label">Toka</span></label><label><input type="radio" value="3" name="radioset3"><span class="psui-label">Kolmas</span></label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Buttonset (select many)</legend>
+                    <div class="psui-buttonsetmulti" tabindex="0">
+                        <label><input type="checkbox" value="1" checked="checked"><span class="psui-label">Eka</span></label><label><input type="checkbox" value="2"><span class="psui-label">Toka</span></label><label><input type="checkbox" value="3"><span class="psui-label">Kolmas</span></label>
+                    </div>
                 </fieldset>
             </section>
-            <section>
-                <h1>Buttonset (select many / checkbox)</h1>
-                <fieldset class="psui-buttonsetmulti" tabindex="0">
-                    <label><input type="checkbox" value="1" checked="checked"><span class="psui-label">Eka</span></label><label><input type="checkbox" value="2"><span class="psui-label">Toka</span></label><label><input type="checkbox" value="3"><span class="psui-label">Kolmas</span></label>
-                </fieldset>
-            </section>
+            
             <section>
                 <h1>File</h1>
                 <fieldset>
-                    <legend>File</legend>
+                    <legend>File selector</legend>
                     <label class="psui-file"><input type="file" /></label>
                 </fieldset>
             </section>
