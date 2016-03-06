@@ -7,16 +7,39 @@
         <style>
             html {margin: 0; padding: 0;}
             body {margin: 0; padding: 0;}
-            header {padding: 0.1em 0.5em; background-color: #ffb;}
+            header {padding: 0.1em 0.5em; background-color: #cdf;}
             article {margin: 0.5em 1em;}
             section {border: 1px solid #999; padding: 0.4em 0.5em; margin: 1em 0;}
-            footer {height: 200px; background: transparent url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' height='100' width='100' viewBox='0 0 100 100'><path style='fill: red; stroke: none;' d='M50 0 a50 50 0 0 0 0 100 a50 50 0 0 0 0 -100z' /></svg>") center center no-repeat;}
+            footer {height: 20px;}
         </style>
+        <script type="text/javascript">
+            function start() {
+                var selector = document.getElementById('themeselector');
+                var value = selector.value;
+                document.body.setAttribute('data-psui-theme', value);
+                selector.onchange = function(event){
+                    var value = this.value;
+                    document.body.setAttribute('data-psui-theme', value);
+                };
+            };
+        </script>
     </head>
-    <body data-psui-theme="yellow3d">
+    <body data-psui-theme="" onload="start();">
         <header>
             <h1>PSUI</h1>
             <h2>Widget set with css</h2>
+            <div>
+                <span>Theme:</span>
+                <select id="themeselector">
+                    <option value="none">none</option>
+                    <option value="round-red">Round red</option>
+                    <option value="yellow3d">Yellow 3D</option>
+                    <option value="graygrad-red">Gray-red</option>
+                    <option value="graygrad-blue">Gray-blue</option>
+                    <option value="graygrad-green">Gray-green</option>
+                    <option value="graygrad-yellow">Gray-yellow</option>
+                </select>
+            </div>
         </header>
         <article>
             
@@ -25,7 +48,7 @@
                 <h1>Text</h1>
                 <fieldset>
                     <legend>Text input</legend>
-                    <label class="psui-row psui-input-text">Nimi: <input type="text" value="Joopajoo" class="psui" /></label>
+                    <label class="psui-row psui-input-text">Nimi: <input type="text" value="Joopajoo" required class="psui" /></label>
                     <label class="psui-row psui-input-text">Nimi: <input type="text" value="Joopajoo" class="psui" /></label>
                     <label class="psui-row psui-input-text">Nimi: <input type="text" value="Joopajoo" class="psui" /></label>
                 </fieldset>

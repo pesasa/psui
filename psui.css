@@ -667,6 +667,12 @@ label.psui-row::before {
 }
 
 
+
+
+
+
+
+
 /********************************************************************
  * yellow3d
  ********************************************************************/
@@ -1097,4 +1103,747 @@ label.psui-row::before {
     background: #fd0;
     text-shadow: 0 0 1px black, 0 0 1px black;
     box-shadow:  1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset -2px -2px 2px rgba(255,255,255,0.5), inset 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
+
+
+
+
+/********************************************************************
+ * Graygrad - red, blue, green, yellow
+ ********************************************************************/
+
+/**** input text ****/
+[data-psui-theme^="graygrad-"] .psui-input-text input[type="text"] {
+    border: 1px solid #888;
+    border-radius: 4px;
+    padding: 0.2em 0.5em;
+    margin: 0.1em;
+    background-color: #fafafa;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.3), inset -1px -1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.3), 1px 1px 1px rgba(255,255,255,0.5);
+}
+
+[data-psui-theme="graygrad-red"] .psui-input-text input[type="text"]:invalid {
+    background-color: #fdd;
+}
+
+[data-psui-theme="graygrad-green"] .psui-input-text input[type="text"]:invalid {
+    background-color: #cfa;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-input-text input[type="text"]:invalid {
+    background-color: #5cf;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-input-text input[type="text"]:invalid {
+    background-color: #ffd;
+}
+
+[data-psui-theme^="graygrad-"] .psui-input-text input[type="text"]:focus {
+    background-color: white;
+}
+
+/**** input checkbox ****/
+[data-psui-theme^="graygrad-"] .psui-checkbox {
+    margin: 0.2em 0;
+}
+
+[data-psui-theme^="graygrad-"] .psui-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+[data-psui-theme^="graygrad-"] .psui-checkbox input[type="checkbox"] + .psui-label::before {
+    content: "";
+    display: inline-block;
+    vertical-align: text-bottom;
+    width: 1em;
+    height: 1em;
+    border-radius: 0.3em;
+    border: 1px solid #333;
+    margin-right: 0.5em;
+    background-color: #ddd;
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.8), -1px -1px 1px rgba(0,0,0,0.4);
+}
+
+[data-psui-theme^="graygrad-"] .psui-checkbox input[type="checkbox"]:checked + .psui-label::before {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.8), -1px -1px 1px rgba(0,0,0,0.4), inset 1px 1px 1px rgba(0,0,0,0.4), inset -1px -1px 1px rgba(255,255,255,0.3);
+}
+
+[data-psui-theme="graygrad-red"] .psui-checkbox input[type="checkbox"]:checked + .psui-label::before {
+    background: #f55 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='1em' height='1em' viewBox='0 0 30 30' class='pssicon pssicon-check'><path style='fill: rgb(0,0,0); stroke: none;' d='M5 5 l10 6 l10 -6 l-6 10 l6 10 l-10 -6 l-10 6 l6 -10z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-checkbox input[type="checkbox"]:checked + .psui-label::before {
+    background: #5cf url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='1em' height='1em' viewBox='0 0 30 30' class='pssicon pssicon-check'><path style='fill: rgb(0,0,0); stroke: none;' d='M5 5 l10 6 l10 -6 l-6 10 l6 10 l-10 -6 l-10 6 l6 -10z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-green"] .psui-checkbox input[type="checkbox"]:checked + .psui-label::before {
+    background: #4c4 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='1em' height='1em' viewBox='0 0 30 30' class='pssicon pssicon-check'><path style='fill: rgb(0,0,0); stroke: none;' d='M5 5 l10 6 l10 -6 l-6 10 l6 10 l-10 -6 l-10 6 l6 -10z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-checkbox input[type="checkbox"]:checked + .psui-label::before {
+    background: #fd5 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='1em' height='1em' viewBox='0 0 30 30' class='pssicon pssicon-check'><path style='fill: rgb(0,0,0); stroke: none;' d='M5 5 l10 6 l10 -6 l-6 10 l6 10 l-10 -6 l-10 6 l6 -10z'></path></svg>") center center no-repeat;
+}
+
+/**** input radio ****/
+[data-psui-theme^="graygrad-"] .psui-radio {
+    margin: 0.2em 0;
+}
+
+[data-psui-theme^="graygrad-"] .psui-radio input[type="radio"] {
+    display: none;
+}
+
+[data-psui-theme^="graygrad-"] .psui-radio input[type="radio"] + .psui-label::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 1px solid #555;
+    margin-right: 0.5em;
+    background-color: #ddd;
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4);
+}
+
+[data-psui-theme="graygrad-red"] .psui-radio input[type="radio"]:checked + .psui-label::before {
+    background: #f55 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='1em' height='1em' viewBox='0 0 30 30' class='pssicon pssicon-radio'><path style='fill: rgb(0,0,0); stroke: none;' d='M15 7 a8 8 0 0 0 0 16 a8 8 0 0 0 0 -16z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-radio input[type="radio"]:checked + .psui-label::before {
+    background: #5cf url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='1em' height='1em' viewBox='0 0 30 30' class='pssicon pssicon-radio'><path style='fill: rgb(0,0,0); stroke: none;' d='M15 7 a8 8 0 0 0 0 16 a8 8 0 0 0 0 -16z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-green"] .psui-radio input[type="radio"]:checked + .psui-label::before {
+    background: #4c4 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='1em' height='1em' viewBox='0 0 30 30' class='pssicon pssicon-radio'><path style='fill: rgb(0,0,0); stroke: none;' d='M15 7 a8 8 0 0 0 0 16 a8 8 0 0 0 0 -16z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-radio input[type="radio"]:checked + .psui-label::before {
+    background: #fd0 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='1em' height='1em' viewBox='0 0 30 30' class='pssicon pssicon-radio'><path style='fill: rgb(0,0,0); stroke: none;' d='M15 7 a8 8 0 0 0 0 16 a8 8 0 0 0 0 -16z'></path></svg>") center center no-repeat;
+}
+
+/**** input range ****/
+[data-psui-theme^="graygrad-"] .psui-range input[type="range"] {
+    -webkit-appearance: none;
+    background-color: #eee;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.8);
+    height:4px;
+    border: 1px solid #555;
+}
+
+[data-psui-theme^="graygrad-"] .psui-range input[type="range"]:focus {
+    outline: none;
+}
+
+/*** webkit ***/
+[data-psui-theme^="graygrad-"] .psui-range input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #eee;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.6);
+    height: 4px;
+    border: 1px solid #555;
+}
+
+[data-psui-theme^="graygrad-"] .psui-range input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-top: -6px;
+    margin-bottom: -6px;
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), 2px 2px 2px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+/*** firefox ***/
+[data-psui-theme^="graygrad-"] .psui-range input[type="range"]::-moz-range-track {
+    -moz-appearance: none;
+    background-color: #eee;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.6);
+    height: 4px;
+    border: 1px solid #555;
+}
+
+[data-psui-theme^="graygrad-"] .psui-range input[type="range"]::-moz-range-thumb {
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), 2px 2px 2px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+/*** ms ***/
+[data-psui-theme^="graygrad-"] .psui-range input[type="range"]::-ms-track {
+    cursor: pointer;
+    color: transparent;
+    background-color: #ed6;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.6);
+    height: 4px;
+    border: 1px solid #55;
+}
+
+[data-psui-theme^="graygrad-"] .psui-range input[type="range"]::-ms-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), 2px 2px 2px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+[data-psui-theme^="graygrad-"] .psui-range input[type="range"]::-ms-fill-lower {
+    border-radius: 4px;
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3);
+}
+
+[data-psui-theme^="graygrad-"] .psui-range input[type="range"]::-ms-fill-upper {
+    background: #444;
+    border-radius: 4px;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.3), inset -2px -2px 2px rgba(255,255,255,0.5);
+}
+
+[data-psui-theme^="graygrad-"] .psui-range input[type="number"] {
+    color: black;
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 0.4em 0.5em 0.1em 0.5em;
+    background-color: #eee;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+[data-psui-theme="graygrad-red"] .psui-range input[type="range"]::-webkit-slider-thumb {
+    background: #f55 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='16' height='16' viewBox='0 0 16 16' class='pssicon pssicon-sliderthumb'><path style='fill: rgb(0,0,0); stroke: none;' d='M8 5 a3 3 0 0 0 0 6 a3 3 0 0 0 0 -6z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-red"] .psui-range input[type="range"]::-moz-range-thumb {
+    background: #f55 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='16' height='16' viewBox='0 0 16 16' class='pssicon pssicon-sliderthumb'><path style='fill: rgb(0,0,0); stroke: none;' d='M8 5 a3 3 0 0 0 0 6 a3 3 0 0 0 0 -6z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-red"] .psui-range input[type="range"]::-ms-range-thumb {
+    background: #f55 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='16' height='16' viewBox='0 0 16 16' class='pssicon pssicon-sliderthumb'><path style='fill: rgb(0,0,0); stroke: none;' d='M8 5 a3 3 0 0 0 0 6 a3 3 0 0 0 0 -6z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-red"] .psui-range input[type="range"]::-ms-fill-lower {
+    background: #f55;
+}
+
+[data-psui-theme="graygrad-red"] .psui-range input[type="number"]:focus {
+    background: #f29c9c;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-range input[type="range"]::-webkit-slider-thumb {
+    background: #5cf url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='16' height='16' viewBox='0 0 16 16' class='pssicon pssicon-sliderthumb'><path style='fill: rgb(0,0,0); stroke: none;' d='M8 5 a3 3 0 0 0 0 6 a3 3 0 0 0 0 -6z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-range input[type="range"]::-moz-range-thumb {
+    background: #5cf url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='16' height='16' viewBox='0 0 16 16' class='pssicon pssicon-sliderthumb'><path style='fill: rgb(0,0,0); stroke: none;' d='M8 5 a3 3 0 0 0 0 6 a3 3 0 0 0 0 -6z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-range input[type="range"]::-ms-range-thumb {
+    background: #5cf url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='16' height='16' viewBox='0 0 16 16' class='pssicon pssicon-sliderthumb'><path style='fill: rgb(0,0,0); stroke: none;' d='M8 5 a3 3 0 0 0 0 6 a3 3 0 0 0 0 -6z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-range input[type="range"]::-ms-fill-lower {
+    background: #5cf;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-range input[type="number"]:focus {
+    background: #5cf;
+}
+
+[data-psui-theme="graygrad-green"] .psui-range input[type="range"]::-webkit-slider-thumb {
+    background: #4c4 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='16' height='16' viewBox='0 0 16 16' class='pssicon pssicon-sliderthumb'><path style='fill: rgb(0,0,0); stroke: none;' d='M8 5 a3 3 0 0 0 0 6 a3 3 0 0 0 0 -6z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-green"] .psui-range input[type="range"]::-moz-range-thumb {
+    background: #4c4 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='16' height='16' viewBox='0 0 16 16' class='pssicon pssicon-sliderthumb'><path style='fill: rgb(0,0,0); stroke: none;' d='M8 5 a3 3 0 0 0 0 6 a3 3 0 0 0 0 -6z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-green"] .psui-range input[type="range"]::-ms-range-thumb {
+    background: #4c4 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='16' height='16' viewBox='0 0 16 16' class='pssicon pssicon-sliderthumb'><path style='fill: rgb(0,0,0); stroke: none;' d='M8 5 a3 3 0 0 0 0 6 a3 3 0 0 0 0 -6z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-green"] .psui-range input[type="range"]::-ms-fill-lower {
+    background: #4c4;
+}
+
+[data-psui-theme="graygrad-green"] .psui-range input[type="number"]:focus {
+    background: #4c4;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-range input[type="range"]::-webkit-slider-thumb {
+    background: #fd0 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='16' height='16' viewBox='0 0 16 16' class='pssicon pssicon-sliderthumb'><path style='fill: rgb(0,0,0); stroke: none;' d='M8 5 a3 3 0 0 0 0 6 a3 3 0 0 0 0 -6z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-range input[type="range"]::-moz-range-thumb {
+    background: #fd0 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='16' height='16' viewBox='0 0 16 16' class='pssicon pssicon-sliderthumb'><path style='fill: rgb(0,0,0); stroke: none;' d='M8 5 a3 3 0 0 0 0 6 a3 3 0 0 0 0 -6z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-range input[type="range"]::-ms-range-thumb {
+    background: #fd0 url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='16' height='16' viewBox='0 0 16 16' class='pssicon pssicon-sliderthumb'><path style='fill: rgb(0,0,0); stroke: none;' d='M8 5 a3 3 0 0 0 0 6 a3 3 0 0 0 0 -6z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-range input[type="range"]::-ms-fill-lower {
+    background: #fd0;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-range input[type="number"]:focus {
+    background: #fd0;
+}
+
+
+
+/**** Dropdown ****/
+[data-psui-theme^="graygrad-"] .psui-dropdown {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background-color: white;
+    padding: 0;
+    padding-right: 1.2em;
+    position: relative;
+    min-width: 5em;
+}
+
+[data-psui-theme^="graygrad-"] .psui-dropdown:focus {
+    outline: none;
+}
+
+[data-psui-theme^="graygrad"] .psui-dropdown::after {
+    content: "";
+    display: inline-block;
+    width: 1.2em;
+    height: 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0px;
+    margin-right: -2px;
+    padding-bottom: 1px;
+    border: 1px solid  #aaa;
+    border: 1px solid  black;
+    border-radius: 0 5px 5px 0;
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3);
+    background: transparent url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='1em' height='1em' viewBox='0 0 30 30' class='pssicon pssicon-sliderthumb'><path style='fill: rgb(0,0,0); stroke: none;' d='M2 10 l26 0 l-13 18z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme^="graygrad-"] .psui-dropdown label .psui-label,
+[data-psui-theme^="graygrad-"] .psui-dropdown label input[type="radio"] + span {
+    color: #111;
+    padding: 0.1em 0.8em;
+    border: 1px solid transparent;
+}
+
+[data-psui-theme^="graygrad-"] .psui-dropdown label input[type="radio"]:checked + span {
+    color: black;
+    text-shadow: 0 0 1px black, 0 0 1px black;
+    border: 1px solid black;
+    border-radius: 5px 0 0 5px;;
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3);
+}
+
+[data-psui-theme^="graygrad-"] .psui-dropdown:focus label input[type="radio"]:checked + span {
+    border-radius: 1em;
+}
+
+[data-psui-theme="graygrad-red"] .psui-dropdown label input[type="radio"]:checked + span {
+    background-color: #f55;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-dropdown label input[type="radio"]:checked + span {
+    background-color: #5cf;
+}
+
+[data-psui-theme="graygrad-green"] .psui-dropdown label input[type="radio"]:checked + span {
+    background-color: #4c4;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-dropdown label input[type="radio"]:checked + span {
+    background-color: #fd0;
+}
+
+/**** Dropdown multi ****/
+[data-psui-theme^="graygrad"] .psui-dropdownmulti {
+    border: 1px solid #aaa;
+    background-color: white;
+}
+
+[data-psui-theme^="graygrad-"] .psui-dropdownmulti:focus {
+    outline: none;
+    box-shadow: 0 0 1px 2px rgba(0,0,0,0.3);
+}
+
+[data-psui-theme^="graygrad-"] .psui-dropdownmulti label .psui-label,
+[data-psui-theme^="graygrad-"] .psui-dropdownmulti label input[type="checkbox"] + span {
+    color: #333;
+    padding: 0.1em 0.8em;
+    border: 1px solid transparent;
+}
+
+[data-psui-theme^="graygrad-"] .psui-dropdownmulti label input[type="checkbox"]:checked + span {
+    color: black;
+    text-shadow: 0 0 1px black, 0 0 1px black;
+    border: 1px solid black;
+    border-radius: 3px;
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+[data-psui-theme^="graygrad-"] .psui-dropdownmulti:focus label input[type="checkbox"]:checked + span {
+    border-radius: 1em;
+}
+
+[data-psui-theme^="graygrad-red"] .psui-dropdownmulti label input[type="checkbox"]:checked + span {
+    background-color: #f55;
+}
+
+[data-psui-theme^="graygrad-blue"] .psui-dropdownmulti label input[type="checkbox"]:checked + span {
+    background-color: #5cf;
+}
+
+[data-psui-theme^="graygrad-green"] .psui-dropdownmulti label input[type="checkbox"]:checked + span {
+    background-color: #4c4;
+}
+
+[data-psui-theme^="graygrad-yellow"] .psui-dropdownmulti label input[type="checkbox"]:checked + span {
+    background-color: #fd0;
+}
+
+/**** Button ****/
+[data-psui-theme^="graygrad"] .psui-button {
+    background-color: #ddd;
+    color: black;
+    border: 1px solid #666;
+    border-radius: 4px;
+    padding: 0.2em 0.8em;
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,828282+100&amp;0+0,0.65+100 */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(130,130,130,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(130,130,130,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(130,130,130,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6828282',GradientType=0 ); /* IE6-9 */
+    background-color: #ddd;
+}
+
+[data-psui-theme^="graygrad-"] .psui-button:hover {
+    text-shadow: 0 0 1px rgba(0,0,0,1);
+}
+
+[data-psui-theme^="graygrad-"] .psui-button:active {
+    color: black;
+    text-shadow: 0 0 1px black, 0 0 1px black;
+    box-shadow:  1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset -2px -2px 2px rgba(255,255,255,0.5), inset 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+[data-psui-theme="graygrad-red"] .psui-button:hover {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #f55;
+}
+
+[data-psui-theme="graygrad-red"] .psui-button:active {
+    box-shadow:  1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset -2px -2px 2px rgba(255,255,255,0.5), inset 2px 2px 2px rgba(0,0,0,0.3);
+    background: #f55;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-button:hover {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #5cf;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-button:active {
+    box-shadow:  1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset -2px -2px 2px rgba(255,255,255,0.5), inset 2px 2px 2px rgba(0,0,0,0.3);
+    background: #5cf;
+}
+
+[data-psui-theme="graygrad-green"] .psui-button:hover {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #4c4;
+}
+
+[data-psui-theme="graygrad-green"] .psui-button:active {
+    box-shadow:  1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset -2px -2px 2px rgba(255,255,255,0.5), inset 2px 2px 2px rgba(0,0,0,0.3);
+    background: #4c4;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-button:hover {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #fd0;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-button:active {
+    box-shadow:  1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset -2px -2px 2px rgba(255,255,255,0.5), inset 2px 2px 2px rgba(0,0,0,0.3);
+    background: #fd0;
+}
+
+/**** Buttonset ****/
+[data-psui-theme^="graygrad-"] .psui-buttonset {
+    box-shadow: -1px -1px 1px rgba(0,0,0,0.5), 1px 1px 1px rgba(255,255,255,0.5);
+    border-radius: 4px;
+}
+
+[data-psui-theme^="graygrad-"] .psui-buttonset:focus {
+    outline: none;
+}
+
+[data-psui-theme^="graygrad-"] .psui-buttonset label .psui-label,
+[data-psui-theme^="graygrad-"] .psui-buttonset label input[type="radio"] + span {
+    background-color: #ddd;
+    color: black;
+    border: 1px solid #444;
+    border-left: none;
+    padding: 0.3em 0.8em;
+    box-shadow: inset 1px 1px 1px rgba(255,255,255,0.5), inset -1px -1px 1px rgba(0,0,0,0.3);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,828282+100&amp;0+0,0.65+100 */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(130,130,130,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(130,130,130,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(130,130,130,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6828282',GradientType=0 ); /* IE6-9 */
+    background-color: #ddd;
+}
+
+[data-psui-theme^="graygrad-"] .psui-buttonset label input[type="radio"]:checked .psui-label,
+[data-psui-theme^="graygrad-"] .psui-buttonset label input[type="radio"]:checked + span {
+    color: black;
+    text-shadow: 0 0 1px black, 0 0 1px black;
+    box-shadow:  1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset -2px -2px 2px rgba(255,255,255,0.5), inset 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+[data-psui-theme^="graygrad-"] .psui-buttonset label:active .psui-label,
+[data-psui-theme^="graygrad-"] .psui-buttonset label:active input[type="radio"] + span {
+    color: black;
+    text-shadow: 0 0 1px black, 0 0 1px black;
+    box-shadow:  1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset -2px -2px 2px rgba(255,255,255,0.5), inset 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+[data-psui-theme^="graygrad-"] .psui-buttonset label:first-child input[type="radio"] .psui-label,
+[data-psui-theme^="graygrad-"] .psui-buttonset label:first-child input[type="radio"] + span {
+    border-radius: 4px 0 0 4px;
+    border-left: 1px solid #444;
+}
+
+[data-psui-theme^="graygrad-"] .psui-buttonset label:last-child input[type="radio"] .psui-label,
+[data-psui-theme^="graygrad-"] .psui-buttonset label:last-child input[type="radio"] + span {
+    border-radius: 0 4px 4px 0;
+}
+
+[data-psui-theme^="graygrad-"] .psui-buttonset label:first-child:last-child input[type="radio"] .psui-label,
+[data-psui-theme^="graygrad-"] .psui-buttonset label:first-child:last-child input[type="radio"] + span {
+    border-radius: 4px;
+}
+
+[data-psui-theme="graygrad-red"] .psui-buttonset label input[type="radio"]:checked .psui-label,
+[data-psui-theme="graygrad-red"] .psui-buttonset label input[type="radio"]:checked + span,
+[data-psui-theme="graygrad-red"] .psui-buttonset label:active .psui-label,
+[data-psui-theme="graygrad-red"] .psui-buttonset label:active input[type="radio"] + span {
+    background: #f55;
+}
+
+[data-psui-theme="graygrad-red"] .psui-buttonset label:hover .psui-label {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #f55;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-buttonset label input[type="radio"]:checked .psui-label,
+[data-psui-theme="graygrad-blue"] .psui-buttonset label input[type="radio"]:checked + span,
+[data-psui-theme="graygrad-blue"] .psui-buttonset label:active .psui-label,
+[data-psui-theme="graygrad-blue"] .psui-buttonset label:active input[type="radio"] + span {
+    background: #5cf;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-buttonset label:hover .psui-label {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #5cf;
+}
+
+[data-psui-theme="graygrad-green"] .psui-buttonset label input[type="radio"]:checked .psui-label,
+[data-psui-theme="graygrad-green"] .psui-buttonset label input[type="radio"]:checked + span,
+[data-psui-theme="graygrad-green"] .psui-buttonset label:active .psui-label,
+[data-psui-theme="graygrad-green"] .psui-buttonset label:active input[type="radio"] + span {
+    background: #4c4;
+}
+
+[data-psui-theme="graygrad-green"] .psui-buttonset label:hover .psui-label {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #4c4;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-buttonset label input[type="radio"]:checked .psui-label,
+[data-psui-theme="graygrad-yellow"] .psui-buttonset label input[type="radio"]:checked + span,
+[data-psui-theme="graygrad-yellow"] .psui-buttonset label:active .psui-label,
+[data-psui-theme="graygrad-yellow"] .psui-buttonset label:active input[type="radio"] + span {
+    background: #fd0;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-buttonset label:hover .psui-label {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #fd0;
+}
+
+/**** Buttonset multi ****/
+[data-psui-theme^="graygrad-"] .psui-buttonsetmulti {
+    box-shadow: -1px -1px 1px rgba(0,0,0,0.5), 1px 1px 1px rgba(255,255,255,0.5);
+    border-radius: 4px;
+}
+
+[data-psui-theme^="graygrad-"] .psui-buttonsetmulti:focus {
+    outline: none;
+}
+
+[data-psui-theme^="graygrad-"] .psui-buttonsetmulti label .psui-label,
+[data-psui-theme^="graygrad-"] .psui-buttonsetmulti label input[type="checkbox"] + span {
+    background-color: #ddd;
+    color: black;
+    border: 1px solid #444;
+    border-left: none;
+    padding: 0.3em 0.8em;
+    box-shadow: inset 1px 1px 1px rgba(255,255,255,0.5), inset -1px -1px 1px rgba(0,0,0,0.3);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,828282+100&amp;0+0,0.65+100 */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(130,130,130,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(130,130,130,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(130,130,130,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6828282',GradientType=0 ); /* IE6-9 */
+}
+
+[data-psui-theme^="graygrad-"] .psui-buttonsetmulti label input[type="checkbox"]:checked .psui-label,
+[data-psui-theme^="graygrad-"] .psui-buttonsetmulti label input[type="checkbox"]:checked + span {
+    color: black;
+    text-shadow: 0 0 1px black, 0 0 1px black;
+    box-shadow:  1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset -2px -2px 2px rgba(255,255,255,0.5), inset 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+[data-psui-theme^="graygrad-"] .psui-buttonsetmulti label:active .psui-label,
+[data-psui-theme^="graygrad-"] .psui-buttonsetmulti label:active input[type="checkbox"] + span {
+    color: black;
+    text-shadow: 0 0 1px black, 0 0 1px black;
+    box-shadow:  1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset -2px -2px 2px rgba(255,255,255,0.5), inset 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+[data-psui-theme^="graygrad-"] .psui-buttonsetmulti label:first-child input[type="checkbox"] .psui-label,
+[data-psui-theme^="graygrad-"] .psui-buttonsetmulti label:first-child input[type="checkbox"] + span {
+    border-radius: 4px 0 0 4px;
+    border-left: 1px solid #444;
+}
+
+[data-psui-theme^="graygrad-"] .psui-buttonsetmulti label:last-child input[type="checkbox"] .psui-label,
+[data-psui-theme^="graygrad-"] .psui-buttonsetmulti label:last-child input[type="checkbox"] + span {
+    border-radius: 0 4px 4px 0;
+}
+
+[data-psui-theme^="graygrad-"] .psui-buttonsetmulti label:first-child:last-child input[type="checkbox"] .psui-label,
+[data-psui-theme^="graygrad-"] .psui-buttonsetmulti label:first-child:last-child input[type="checkbox"] + span {
+    border-radius: 4px;
+}
+
+[data-psui-theme="graygrad-red"] .psui-buttonsetmulti label input[type="checkbox"]:checked .psui-label,
+[data-psui-theme="graygrad-red"] .psui-buttonsetmulti label input[type="checkbox"]:checked + span,
+[data-psui-theme="graygrad-red"] .psui-buttonsetmulti label:active .psui-label,
+[data-psui-theme="graygrad-red"] .psui-buttonsetmulti label:active input[type="checkbox"] + span {
+    background: #f55;
+}
+
+[data-psui-theme="graygrad-red"] .psui-buttonsetmulti label:hover .psui-label {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #f55;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-buttonsetmulti label input[type="checkbox"]:checked .psui-label,
+[data-psui-theme="graygrad-blue"] .psui-buttonsetmulti label input[type="checkbox"]:checked + span,
+[data-psui-theme="graygrad-blue"] .psui-buttonsetmulti label:active .psui-label,
+[data-psui-theme="graygrad-blue"] .psui-buttonsetmulti label:active input[type="checkbox"] + span {
+    background: #5cf;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-buttonsetmulti label:hover .psui-label {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #5cf;
+}
+
+[data-psui-theme="graygrad-green"] .psui-buttonsetmulti label input[type="checkbox"]:checked .psui-label,
+[data-psui-theme="graygrad-green"] .psui-buttonsetmulti label input[type="checkbox"]:checked + span,
+[data-psui-theme="graygrad-green"] .psui-buttonsetmulti label:active .psui-label,
+[data-psui-theme="graygrad-green"] .psui-buttonsetmulti label:active input[type="checkbox"] + span {
+    background: #4c4;
+}
+
+[data-psui-theme="graygrad-green"] .psui-buttonsetmulti label:hover .psui-label {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #4c4;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-buttonsetmulti label input[type="checkbox"]:checked .psui-label,
+[data-psui-theme="graygrad-yellow"] .psui-buttonsetmulti label input[type="checkbox"]:checked + span,
+[data-psui-theme="graygrad-yellow"] .psui-buttonsetmulti label:active .psui-label,
+[data-psui-theme="graygrad-yellow"] .psui-buttonsetmulti label:active input[type="checkbox"] + span {
+    background: #fd0;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-buttonsetmulti label:hover .psui-label {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #fd0;
+}
+
+
+
+
+
+
+
+/**** input file ****/
+[data-psui-theme^="graygrad-"] .psui-file {
+    border: 1px solid #444;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 1px rgba(255,255,255,0.5), inset -1px -1px 1px rgba(0,0,0,0.3);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,828282+100&amp;0+0,0.65+100 */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(130,130,130,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(130,130,130,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(130,130,130,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6828282',GradientType=0 ); /* IE6-9 */
+}
+
+[data-psui-theme^="graygrad-"] .psui-file::after {
+    display: block;
+    height: 30px;
+    width: 30px;
+    content: "";
+    background: transparent url("data:image/svg+xml;charcode=utf-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='30' height='30' viewBox='0 0 30 30' class='pssicon pssicon-folder pssicon-open'><path style='fill: rgb(0,0,0); stroke: none;' d='M2 6 l7 0 l1 2 l13 0 l0 2 l-16 0 l-4 14 l5 -12 l21 0 l-5 13 -22 0z'></path></svg>") center center no-repeat;
+}
+
+[data-psui-theme="graygrad-red"] .psui-file:hover {
+     box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #f55;
+    text-shadow: 0 0 1px rgba(0,0,0,1);
+}
+
+[data-psui-theme="graygrad-blue"] .psui-file:hover {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #5cf;
+    text-shadow: 0 0 1px rgba(0,0,0,1);
+}
+
+[data-psui-theme="graygrad-green"] .psui-file:hover {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #4c4;
+    text-shadow: 0 0 1px rgba(0,0,0,1);
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-file:hover {
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(0,0,0,0.3), inset 0 0 1px 1px #fd0;
+    text-shadow: 0 0 1px rgba(0,0,0,1);
+}
+
+[data-psui-theme^="graygrad-"] .psui-file:active {
+    color: black;
+    text-shadow: 0 0 1px black, 0 0 1px black;
+    box-shadow:  1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.4), inset -2px -2px 2px rgba(255,255,255,0.5), inset 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+[data-psui-theme="graygrad-red"] .psui-file:active {
+    background: #f55;
+}
+
+[data-psui-theme="graygrad-blue"] .psui-file:active {
+    background: #5cf;
+}
+
+[data-psui-theme="graygrad-green"] .psui-file:active {
+    background: #4c4;
+}
+
+[data-psui-theme="graygrad-yellow"] .psui-file:active {
+    background: #fd0;
 }
